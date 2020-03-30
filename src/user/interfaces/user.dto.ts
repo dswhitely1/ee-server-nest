@@ -1,9 +1,13 @@
-import { ApiProperty } from '@nestjs/swagger';
+import {
+  ApiHideProperty,
+  ApiProperty,
+  ApiPropertyOptional,
+} from '@nestjs/swagger';
 import { IsString, IsUUID, IsDate } from 'class-validator';
 import { User } from '../../models/user.entity';
 
 export class UserDTO implements Readonly<UserDTO> {
-  @ApiProperty()
+  @ApiHideProperty()
   @IsUUID()
   id: string;
 
@@ -15,15 +19,15 @@ export class UserDTO implements Readonly<UserDTO> {
   @IsString()
   password: string;
 
-  @ApiProperty()
+  @ApiHideProperty()
   @IsString()
   role: string;
 
-  @ApiProperty()
+  @ApiHideProperty()
   @IsDate()
   createdAt: Date;
 
-  @ApiProperty()
+  @ApiHideProperty()
   @IsDate()
   updatedAt: Date;
 
