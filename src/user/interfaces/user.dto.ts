@@ -1,8 +1,4 @@
-import {
-  ApiHideProperty,
-  ApiProperty,
-  ApiPropertyOptional,
-} from '@nestjs/swagger';
+import { ApiHideProperty, ApiProperty } from '@nestjs/swagger';
 import { IsString, IsUUID, IsDate } from 'class-validator';
 import { User } from '../../models/user.entity';
 
